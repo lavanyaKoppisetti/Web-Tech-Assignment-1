@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Login Page</title>
+ <script>
+
+  let l=document.getElementById('login');
+  let error=document.getElementById('error');
+  let form=document.getElementById('form');
+  form.addEventListener('submit',(e)=>{
+    if(l.value ===' ' || l.name == null){
+       e.preventDefault();
+        error.innerHTML="name is required";
+    }
+  });
+
+
+ </script>
+ <style>
+  .l{
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 50px 400px;
+   
+  }
+  .l .j{
+    margin-top: 10px;
+  }
+  .k{
+    padding: 5px 0px;
+  }
+  .k label{
+    font-size: 20px;
+  }
+  .j1{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 15px;
+    
+  }
+ </style>
+</head>
+<body>
+ 
+ <div class="l">
+  <div class="j">
+  <center><img src="loginimage.webp" alt="image" width="400px" height="400px" ></center>
+  <h1><center>Enter Login Details:</center></h1>
+</div>
+  <form id="form">
+   
+  <div class="k">
+   
+  <label for="login">Login ID:</label>
+  <input type="text" name="login" id="login" >
+  <span id="error"></span>
+  </div>
+  <br>
+  <div class="k">
+  <label for="pass">Password:</label>
+  <input type="text" name="pass" id="pass">
+ </div>
+
+ <div class="j1">
+  <button type="submit" >submit</button>
+  <input type="reset">
+ </div>
+ </form>
+ 
+</div>
+</body>
+</html>
